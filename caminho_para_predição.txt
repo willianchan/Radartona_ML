@@ -1,0 +1,7 @@
+trajetos -> separar data, origem e velocidade -> split da data em variaveis separadas
+base_radares -> arrumar ids e velocidade maxima
+trajetos+base_radares -> cruzar com id do radar -> velocidades
+velocidades+clima -> cruzar data com clima
+
+após base pronta -> treinar modelo
+//TODO: completar etapas
