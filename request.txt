@@ -1,0 +1,1 @@
+localhost:5000/predict?id_radar=6955&ano=2018&mes=2&dia=6&hora=15&minuto=9&velocidade_maxima=50&chuva=1

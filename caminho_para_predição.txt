@@ -1,7 +1,27 @@
 trajetos -> separar data, origem e velocidade -> split da data em variaveis separadas
+
+SELECT 
+      [origem] as id_radar
+      ,[v0] as velocidade
+	  ,YEAR(data_inicio) as ano
+	  ,MONTH(data_inicio) as mes
+	  ,DAY(data_inicio) as dia
+	  ,datepart(hour, data_inicio) as hora
+	  ,datepart(minute, data_inicio) as minuto
+  FROM [radartona].[dbo].[trajetos]
+
 base_radares -> arrumar ids e velocidade maxima
+
+arquivo tratamento_base_radares
+
 trajetos+base_radares -> cruzar com id do radar -> velocidades
-velocidades+clima -> cruzar data com clima
+
+arquivo cruzamento
+
+velocidades+clima -> cruzar data com clima *********** OPEN WEATHER JSON
+
+arquivo cruzamento_clima
 
 após base pronta -> treinar modelo
-//TODO: completar etapas
+
+ModeloPredição.ipynb
