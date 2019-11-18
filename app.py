@@ -23,11 +23,11 @@ def predict():
     chuva = int(request.args.get('chuva'))
 
     result = modelo.predict([[id_radar,ano,mes,dia,hora,minuto,velocidade_maxima,chuva]])[0]
-    #resultado sai em décimos de metros por segundo
+    #resultado sai em decimos de metros por segundo
     #convertendo para km/h
     result = result*3.6/10
 
     return jsonify({"velocidade":result})
 
 if __name__ == '__main__':
-    app.run(port=8080)
+    app.run(port=8080, host='0.0.0.0')
