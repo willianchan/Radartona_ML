@@ -36,3 +36,6 @@ O treinamento é detalhado no seguinte Notebook [Jupyter de Treinamento](https://
 
 O modelo foi gerado e salvo em formato pickle(.pkl)
 
+## Documentação
+
+A aplicação está documentada em OpenAPI 3.0 - [Documentação](https://app.swaggerhub.com/apis-docs/willianchan/API_Milenio_Bus_Radartona_Predicao/1.0.0)
