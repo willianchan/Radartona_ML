@@ -2,10 +2,14 @@ from flask import Flask, request, jsonify
 import _pickle as cPickle
 from sklearn.ensemble import RandomForestClassifier
 
-with open('./modelo_radartona.pkl', 'rb') as fid:
+with open('./modelo_rl.pkl', 'rb') as fid:
     modelo = cPickle.load(fid)
 
 app = Flask(__name__)
+
+@app.route('/')
+def hello():
+    return "bem vindo a API de predicao"
 
 @app.route('/predict')
 def predict():
