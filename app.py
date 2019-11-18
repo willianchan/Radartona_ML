@@ -1,10 +1,8 @@
 from flask import Flask, request, jsonify
-import pandas as pd
-import numpy as np
 import _pickle as cPickle
 from sklearn.ensemble import RandomForestClassifier
 
-with open('C:/Users/Willian/Desktop/Radartona/Radartona_ML/modelos/modelo_radartona.pkl', 'rb') as fid:
+with open('./modelo_radartona.pkl', 'rb') as fid:
     modelo = cPickle.load(fid)
 
 app = Flask(__name__)
@@ -28,4 +26,4 @@ def predict():
     return jsonify({"velocidade":result})
 
 if __name__ == '__main__':
-    app.run()
+    app.run(port=8080)
