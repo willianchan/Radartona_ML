@@ -13,7 +13,7 @@ cd Radartona_ML
 
 sudo docker build -t api_predict .
 
-sudo docker run --rm -it -d -p 8080:8080 --name api_predict api_predict
+sudo docker run --rm -it -d -p 80:80 --name api_predict api_predict
 ```
 
 ## Bases utilizadas
